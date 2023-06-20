@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+ * {
+      box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+
+    }
+    body {
+      margin: 0; /* body의 기본마진을 없애줍니다(선택사항) */
+      font-family: sans-serif;
+    }
+    .navibar{
+    min-width: 1100px;
+  height:60px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #f2f4f7;
+
+}
+.navibar #logo{
+  line-height:60px;
+  margin-left: 170px;
+}
+
+.navibar #logo img{
+  vertical-align: middle;
+}
+
+.navibar #menu{
+  float:right;
+  list-style:none;
+  padding:0;
+  margin-bottom:0;
+  margin-top: 0;
+  margin-right: 170px;
+}
+.navibar #menu li{
+  float:left;
+  margin-left:30px;
+  line-height:60px;
+}
+
+.navibar #menu li a {
+  color:#545454;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navibar #menu li a:hover{
+        color: black;
+    }
+
+    /* nav */
+    .navibar > nav {
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+    }
+    .nav_items {
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 120px;
+      padding-left: 40px;
+      margin-top: -15px;
+    }
+    .nav_items ul > li {
+      display: inline-block;
+      margin-right: 224px;
+    }
+    .nav_items ul > li:nth-child(-n + 7) > a { /* <ul>하위 7번째 <li>까지 각각 내부의 <a> 태그 접근 */
+      color: #545454;
+    }
+    .nav_items ul > li > a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+
+    .photo{
+        text-align: center;
+        min-width: 1120px;
+    }
+    .text{
+        font-size: 16px;
+        font-weight: light;
+        margin-top: 67px;
+        margin-left: 200px;
+        margin-right: 200px;
+        font-family: 'Noto Sans KR';
+        min-width: 1100px;
+    }
+    .footer{
+        background-color: #D9D9D9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        margin-top: 139px;
+    }
+    .footer a{
+        margin-left:20px;
+        margin-right:20px;
+        text-decoration:none;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="navibar">
+            <a href="#" id="logo">
+                <img src ="C:\Users\OSY\Downloads\SPOHI (1).png" height="20">
+            </a>
+            <ul id="menu">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="brand.html">BRAND</a></li>
+            </ul>
+        </div>
+        <nav>
+          <div class="nav_items">
+            <ul>
+              <li><a href="outer.html">OUTER</a></li>
+              <li><a href="/">TOP</a></li>
+              <li><a href="/">BOTTOM</a></li>
+              <li><a href="/">BAG</a></li>
+              <li><a href="/">ACC</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+    </div>
+    <div class="photo">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1190&q=80" height="700" width="1120">
+    </div>
+    <div class="text">
+        스포하이는 고객들에게 스포츠 브랜드를 효과적으로 소개하여 특정 운동 분야나 운동 수준에 맞는 다양한 제품을 제공받을 수 있도록 선택의 폭을 넓히게 합니다. 다양한 스포츠 브랜드를 목록 형태로 제공하여 사용자는 해당 목록을 살펴보고 원하는 브랜드를 선택할 수 있습니다. 각 브랜드에 대한 상세한 정보를 제공하여 브랜드의 역사, 설립연도, 주요 제품 카테고리, 브랜드의 철학이나 가치관 등을 고객들에게 알려줍니다. 각 브랜드의 제품 카탈로그를 제공하여 브랜드와 제품의 품질과 성능에 대한 정보를 제공하여 사용자들이 한 눈에 보기 쉽게 정리해놓은 웹사이트입니다.
+    </div>
+
+    <div class="footer">
+        <a href="http://facebook.com">
+        <img src="https://bakey.codeit.kr/files/629/images/facebook.png" height="20">
+        </a>
+        <a href="http://instagram.com">
+        <img src="https://bakey.codeit.kr/files/629/images/instagram.png" height="20">
+        </a>
+        <a href="http://twitter.com">
+        <img src="https://bakey.codeit.kr/files/629/images/twitter.png" height="20">
+        </a>
+    </div>
+</body>
+</html>

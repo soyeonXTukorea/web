@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+      box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+      padding: 0;
+    }
+    body {
+      margin: 0; /* body의 기본마진을 없애줍니다(선택사항) */
+      font-family: sans-serif;
+      min-width: 1160px;
+    }
+    .header{
+        width: 100%;
+        height: 700px;
+        position: relative;
+    }
+    .header::before{
+        content: "";
+        background-image: url("https://images.unsplash.com/photo-1608541737042-87a12275d313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=861&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        opacity: 0.5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+   
+    .navibar{
+    min-width: 1120px;
+  height:60px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  position: relative;
+
+}
+.navibar #logo{
+  line-height:60px;
+  margin-left: 170px;
+}
+
+.navibar #logo img{
+  vertical-align: middle;
+}
+
+.navibar #menu{
+  float:right;
+  list-style:none;
+  padding:0;
+  margin-bottom:0;
+  margin-top: 0;
+  margin-right: 170px;
+}
+.navibar #menu li{
+  float:left;
+  margin-left:30px;
+  line-height:60px;
+}
+
+.navibar #menu li a {
+  color:#ffffff;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navibar #menu li a:hover{
+        color: black;
+    }
+
+.brandname{
+    position: relative;
+    text-align: center;
+}
+.brandname h3{
+    font-size: 96px;
+    margin-top: 200px;
+    color: #fff;
+}
+.open{
+    color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            border: 2px solid white;
+            box-sizing: border-box;
+            padding: 30px 70px;
+            font-size: 21px;
+            font-weight: light;
+}
+.open:hover{
+            border-color: black;
+            color: black;
+        }
+        
+    .detail{
+        font-family: 'Noto Sans KR';
+        margin-bottom: 40px;
+    }
+    .detail h3{
+        margin-left: 200px;
+        margin-top: 100px;
+        min-width: 1160px;
+        text-align: left;
+        font-size: 20px;
+    }
+    .detail p{
+        font-size: 18px;
+        text-align: left;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: 20px;
+    }
+    .bestseller{
+        font-family: 'Noto Sans KR';
+        margin-left: 200px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .bestseller h3{
+        margin-top: 100px;
+        min-width: 1160px;
+        font-size: 20px;
+    }
+    .bestseller p{
+        font-size: 16px;
+    }
+    .clothes1{
+        margin-right: 20px;
+    }
+    .clothes2{
+        margin-right: 20px;
+    }
+    .bestseller>a:hover img {
+  transition: transform 1s;
+  filter: brightness(50%);
+}
+.bestseller2{
+        font-family: 'Noto Sans KR';
+        margin-left: 200px;
+        text-align: left;
+        margin-bottom: 150px;
+    }
+    .bestseller2 h3{
+        margin-top: 100px;
+        min-width: 1160px;
+        font-size: 20px;
+    }
+    .bestseller2 p{
+        font-size: 16px;
+    }
+    .shoes1{
+        margin-right: 20px;
+    }
+    .shoes2{
+        margin-right: 20px;
+    }
+    .bestseller2>a:hover img {
+  transition: transform 1s;
+  filter: brightness(50%);
+}
+.clearfix{
+        clear:both;
+    }
+.footer{
+        background-color: #D9D9D9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .footer a{
+        margin-left:20px;
+        margin-right:20px;
+        text-decoration:none;
+    }
+  </style>
+<body>
+    <div class="header">
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src ="C:\Users\OSY\Downloads\SPOHI (1).png" height="20">
+        </a>
+        <ul id="menu">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="brand.html">BRAND</a></li>
+          
+        </ul>
+      </div>
+   <div class="brandname">
+    <h3>NIKE</h3>
+    <a href="https://www.nike.com/kr/?utm_source=Naver&utm_medium=PS&utm_campaign=365DIGITAL_NaverSrand_Main_pc&utm_term=homelink_pc220207&cp=73344396590_search_&dclid=CjgKEAjw7aqkBhDu2fr-zaPbqjQSJACyEyznH5r9LrJ4XnMsr8FdsrTLPbgf_crNyFgMBngkf68P3_D_BwE" class="open">공식 홈페이지 바로가기</a>
+   </div>
+</div> 
+<div class="detail">
+    <h3>HISTORY</h3>
+    <p>나이키(NIKE)는 운동화, 운동복, 운동용품 등을 제작 · 판매하는 미국의 스포츠용품 브랜드이다. 빌 바우어만(Bill Bowerman)과 필 나이트(Phil Knight)는 1964년에 블루 리본 스포츠(Blue Ribbon Sports)라는 이름으로 회사를 설립하고 일본 오니츠카 타이거사(Onitsuka Tiger, 현재 아식스, ASICS)의 기능성 운동화를 들여와 미국 시장에서 판매했다. 1972년 그리스 신화 속 승리의 여신인 니케(Nike)의 미국식 발음을 따 ‘나이키’로 브랜드 이름을 바꿨고, 1988년 이후부터 '저스트 두 잇(JUST DO IT)'이라는 마케팅 활동을 펼치며 세계적인 브랜드로 성장했다.</p>
+</div>
+
+<div class="bestseller">
+    <h3>BEST SELLER</h3>
+    <p>+ Clothes</p>
+    <a href="detail.html" class="clothes1">
+        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9d44344e-8d1a-4435-b4a1-8aa36c658e63/%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%9B%A8%EC%96%B4-%EC%86%94%EB%A1%9C-%EC%8A%A4%EC%9A%B0%EC%8B%9C-%EB%82%A8%EC%84%B1-%ED%8A%B8%EB%9E%99-%EC%9E%AC%ED%82%B7-yWsZ306u.png" width="360">
+    </a>
+    <a href="" class="clothes2">
+        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/906b6483-2ab9-4d80-a0a1-a6a45ad76476/%EB%93%9C%EB%9D%BC%EC%9D%B4-%ED%95%8F-%EB%82%A8%EC%84%B1-%EB%9F%AC%EB%8B%9D-%ED%8B%B0%EC%85%94%EC%B8%A0-gGUYNKc8.png" width="360">
+    </a>
+    <a href="" class="clothes3">
+        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1ed67a0f-21e1-4ed7-ad61-bb0cde6df0fa/%ED%86%A0%ED%8A%B8%EB%84%98-%ED%99%8B%EC%8A%A4%ED%8D%BC-2023-24-%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80-%ED%99%88-%EB%82%A8%EC%84%B1-%EB%93%9C%EB%9D%BC%EC%9D%B4-%ED%95%8F-%EC%B6%95%EA%B5%AC-%EC%A0%80%EC%A7%80-CAdUsYEF.png" width="360">
+    </a>
+</div>
+<div class="bestseller2">
+        <h3>BEST SELLER</h3>
+        <p>+ Shoes</p>
+        <a href="" class="shoes1">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/%EB%8D%A9%ED%81%AC-%EB%A1%9C%EC%9A%B0-%EB%A0%88%ED%8A%B8%EB%A1%9C-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-bDdzzUjf.png" width="360">
+        </a>
+        <a href="" class="shoes2">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/%EC%97%90%EC%96%B4-%ED%8F%AC%EC%8A%A4-1-07-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C-TttlGpDb.png" width="360">
+        </a>
+        <a href="" class="shoes3">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3396ee3c-08cc-4ada-baa9-655af12e3120/%EC%9D%B8%EB%B9%88%EC%84%9C%EB%B8%94-3-%EB%82%A8%EC%84%B1-%EB%A1%9C%EB%93%9C-%EB%9F%AC%EB%8B%9D%ED%99%94-mUkQDlaH.png" width="360">
+        </a>
+
+</div>
+<div class="clearfix"></div>
+<div class="footer">
+    <a href="http://facebook.com">
+        <img src="https://bakey.codeit.kr/files/629/images/facebook.png" height="20">
+      </a>
+       <a href="http://instagram.com">
+        <img src="https://bakey.codeit.kr/files/629/images/instagram.png" height="20">
+      </a>
+       <a href="http://twitter.com">
+        <img src="https://bakey.codeit.kr/files/629/images/twitter.png" height="20">
+      </a>
+  </div>
+
+</div>
+</body>
+</html>

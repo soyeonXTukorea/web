@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brand</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+      box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+      
+    }
+    body {
+      margin: 0; /* body의 기본마진을 없애줍니다(선택사항) */
+      font-family: sans-serif;
+      min-width: 1100px;
+    }
+    .navibar{
+    min-width: 1100px;
+  height:60px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #f2f4f7;
+
+}
+.navibar #logo{
+  line-height:60px;
+  margin-left: 170px;
+}
+
+.navibar #logo img{
+  vertical-align: middle;
+}
+
+.navibar #menu{
+  float:right;
+  list-style:none;
+  padding:0;
+  margin-bottom:0;
+  margin-top: 0;
+  margin-right: 170px;
+}
+.navibar #menu li{
+  float:left;
+  margin-left:30px;
+  line-height:60px;
+}
+
+.navibar #menu li a {
+  color:#545454;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navibar #menu li a:hover{
+        color: black;
+    }
+
+    /* nav */
+    .navibar > nav {
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+    }
+    .nav_items {
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 120px;
+      padding-left: 40px;
+      margin-top: -15px;
+    }
+    .nav_items ul > li {
+      display: inline-block;
+      margin-right: 224px;
+    }
+    .nav_items ul > li:nth-child(-n + 7) > a { /* <ul>하위 7번째 <li>까지 각각 내부의 <a> 태그 접근 */
+      color: #545454;
+    }
+    .nav_items ul > li > a {
+      text-decoration: none;
+      cursor: pointer;
+      
+    }
+  
+
+    .header{
+  height:500px;
+  background-image:url("https://images.unsplash.com/photo-1523309375637-b3f4f2347f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80");
+  background-repeat:no-repeat;  /*이미지 반복배열 제한*/
+  background-size:cover; /*배경을 이미지로 완전히 덮이도록함*/ 
+  background-position:center center; /*정가운데 위치하도록함*/
+}
+.allbrand{
+  width: 1100px;
+  margin: 0 auto;
+  border-bottom: 2px dotted #f2f4f7;
+}
+
+.allbrand h3{
+        font-size: 24px;
+        color: black;
+        margin-top: 175px;
+        margin-bottom: 23px;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Noto Sans KR';
+    }
+
+    .brands{
+        width: 953px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+        
+    }
+    .brand1{
+        margin-right: 13px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    .brand2{
+        margin-right: 13px;
+        overflow: hidden;
+    }
+    .brand3{
+        margin-right: 13px;
+        overflow: hidden;
+    }
+    .line{
+      margin-bottom: 30px;
+    }
+    .brands>a:hover img {
+  transition: transform 1s;
+  filter: brightness(50%);
+    }
+    .allbrand2{
+  width: 1100px;
+  border-bottom: 2px dotted #f2f4f7;
+  margin: 0 auto;
+}
+
+    .brands2{
+        width: 953px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        
+    }
+    .brand4{
+        margin-right: 13px;
+        overflow: hidden;
+        
+    }
+    .brand4 img{
+      object-fit:cover;
+    }
+    .brand5{
+        margin-right: 13px;
+        overflow: hidden;
+    }
+    .brand6{
+        margin-right: 13px;
+        overflow: hidden;
+    }
+    .brands2>a:hover img {
+  transition: transform 1s;
+  filter: brightness(50%);
+}
+.line{
+      margin-bottom: 30px;
+    }
+
+</style>
+<body>
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src ="C:\Users\OSY\Downloads\SPOHI (1).png" height="20">
+        </a>
+        <ul id="menu">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="brand.html">BRAND</a></li>
+          
+        </ul>
+      </div>
+    <nav>
+      <div class="nav_items">
+        <ul>
+      	  <li><a href="outer.html">OUTER</a></li>
+          <li><a href="/">TOP</a></li>
+          <li><a href="/">BOTTOM</a></li>
+          <li><a href="/">BAG</a></li>
+          <li><a href="/">ACC</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="header"></div>
+
+    <div class="allbrand">
+      <h3>BRAND</h3>
+    <div class="brands">
+      <a href="nike.html" class="brand1">
+        <img src="https://images.unsplash.com/photo-1558104631-0fa41a8f6c20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" width="300" height="300">
+        
+      </a>
+    
+      <a href="https://www.adidas.co.kr/?NaPm=ct%3Dlix7wczc%7Cci%3D0z80002x6SHypuM0uKXD%7Ctr%3Dbrnd%7Chk%3Dbad8d4a1eea43fb7cc310b9ff8a60fb077729599&cm_mmc=AdieSEM_naverbs-_-ALWAYSON-_-3_PC_Title_A-_--_-dv%3AeCom-_-cn%3AALWAYSON-_-pc%3Anaverbs&cm_mmc1=KR&cm_mmc2=PPC-Multiple-CrossCategory-None-Exact-KR-APAC-eCom-Paid_Search" class="brand2">
+        <img src="https://images.unsplash.com/photo-1608550742884-68021295cd82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1188&q=80" width="300" height="300">
+      </a>
+    
+      <a href="https://www.asics.co.kr/?utm_source=brand_pc&utm_medium=brand&utm_campaign=ebiz_brand_top_main&n_media=27758&n_query=%EC%95%84%EC%8B%9D%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-04-000000022502022&n_ad=nad-a001-04-000000246858772&n_keyword_id=nkw-a001-04-000003865322896&n_keyword=%EC%95%84%EC%8B%9D%EC%8A%A4&n_campaign_type=4&n_contract=tct-a001-04-000000000699677&n_ad_group_type=5&NaPm=ct%3Dlix7wqvc%7Cci%3D0ya0002P6SHy9mngJ0X2%7Ctr%3Dbrnd%7Chk%3D573854a4f01bd401294bd5f314e694fdc5b7e78d" class="brand3">
+        <img src="https://images.unsplash.com/photo-1575456632743-a868c5743aa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=433&q=80" width="300" height="300">
+      </a>
+      </div>
+      <div class="line"></div>
+      </div>
+      <div class="allbrand2">
+      <div class="brands2">
+        <a href="https://www.nike.com/kr/?utm_source=Naver&utm_medium=PS&utm_campaign=365DIGITAL_NaverSrand_Main_pc&utm_term=homelink_pc220207&cp=73344396590_search_&dclid=CjgKEAjw7aqkBhDu2fr-zaPbqjQSJACyEyznH5r9LrJ4XnMsr8FdsrTLPbgf_crNyFgMBngkf68P3_D_BwE" class="brand4">
+          <img src="https://images.unsplash.com/photo-1582898967731-b5834427fd66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" width="300" height="300">
+        </a>
+      
+        <a href="https://www.adidas.co.kr/?NaPm=ct%3Dlix7wczc%7Cci%3D0z80002x6SHypuM0uKXD%7Ctr%3Dbrnd%7Chk%3Dbad8d4a1eea43fb7cc310b9ff8a60fb077729599&cm_mmc=AdieSEM_naverbs-_-ALWAYSON-_-3_PC_Title_A-_--_-dv%3AeCom-_-cn%3AALWAYSON-_-pc%3Anaverbs&cm_mmc1=KR&cm_mmc2=PPC-Multiple-CrossCategory-None-Exact-KR-APAC-eCom-Paid_Search" class="brand5">
+          <img src="https://images.unsplash.com/photo-1518841024803-143c51852c8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" width="300" height="300">
+        </a>
+      
+        <a href="https://www.asics.co.kr/?utm_source=brand_pc&utm_medium=brand&utm_campaign=ebiz_brand_top_main&n_media=27758&n_query=%EC%95%84%EC%8B%9D%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-04-000000022502022&n_ad=nad-a001-04-000000246858772&n_keyword_id=nkw-a001-04-000003865322896&n_keyword=%EC%95%84%EC%8B%9D%EC%8A%A4&n_campaign_type=4&n_contract=tct-a001-04-000000000699677&n_ad_group_type=5&NaPm=ct%3Dlix7wqvc%7Cci%3D0ya0002P6SHy9mngJ0X2%7Ctr%3Dbrnd%7Chk%3D573854a4f01bd401294bd5f314e694fdc5b7e78d" class="brand6">
+          <img src="https://images.unsplash.com/photo-1633523154731-d131470565d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" width="300" height="300">
+        </a>
+        </div>
+        <div class="line"></div>
+        </div>
+</body>
+</html>

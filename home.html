@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+      box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+      padding: 0;
+    }
+    body {
+      margin: 0; /* body의 기본마진을 없애줍니다(선택사항) */
+      font-family: sans-serif;
+    }
+    .navibar{
+      
+    min-width: 1120px;
+  height:60px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #f2f4f7;
+
+}
+.navibar #logo{
+  line-height:60px;
+  margin-left: 170px;
+}
+
+.navibar #logo img{
+  vertical-align: middle;
+}
+
+.navibar #menu{
+  float:right;
+  list-style:none;
+  padding:0;
+  margin-bottom:0;
+  margin-top: 0;
+  margin-right: 170px;
+}
+.navibar #menu li{
+  float:left;
+  margin-left:30px;
+  line-height:60px;
+}
+
+.navibar #menu li a {
+  color:#545454;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navibar #menu li a:hover{
+        color: black;
+    }
+
+    /* nav */
+    .navibar > nav {
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+    }
+    .nav_items {
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 160px;
+      padding-left: 40px;
+      margin-top: -15px;
+    }
+    .nav_items ul > li {
+      display: inline-block;
+      margin-right: 224px;
+    }
+    .nav_items ul > li:nth-child(-n + 7) > a { /* <ul>하위 7번째 <li>까지 각각 내부의 <a> 태그 접근 */
+      color: #545454;
+    }
+    .nav_items ul > li > a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    .section [id*="slide"] {
+    display:none;
+
+}
+	/* 슬라이드 영역 - max-width 크기를 조절해주면 됩니다*/
+	.section .slidewrap {
+        max-width: 100%; 
+        height:500px;
+        overflow:hidden;
+        position:relative;
+        text-align: left;
+        margin: 0;
+        padding-left: 0;
+      
+
+
+    }
+	.section .slidelist {
+    white-space:nowrap;
+    font-size:0;
+  }
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > div {display:block;position:relative;}
+
+	/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+	.section .slide-control {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;}
+	.section .slide-control label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slide-control .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .slide-control .right {right:30px;background:url('https://cdn-icons-png.flaticon.com/512/60/60665.png') center center / 100% no-repeat;background-size: 40px 40px;}
+	.section .slide-control [class*="control"] {display:none;}
+
+	/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+	.section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section [id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section [id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+	
+	/*  INPUT이 체크되면 변화값이 좌우 슬라이드 버튼을 담고 있는 div 까지 전달되는 스타일 */
+	.section [id="slide01"]:checked ~ .slidewrap .control01 {display:block;}
+	.section [id="slide02"]:checked ~ .slidewrap .control02 {display:block;}
+	.section [id="slide03"]:checked ~ .slidewrap .control03 {display:block;}
+
+
+    .bestbrand h3{
+        font-size: 24px;
+        color: black;
+        margin-top: 175px;
+        margin-bottom: 23px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .brand-list{
+        min-width: 1240px;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    .brand1{
+        margin-right: 8px;
+        overflow: hidden;
+    }
+    .brand2{
+        margin-right: 8px;
+        overflow: hidden;
+    }
+    .brand3{
+        margin-right: 8px;
+        overflow: hidden;
+    }
+    .brand4{
+        overflow: hidden;
+    }
+
+    .weeklybrand h3{
+        font-size: 24px;
+        color: black;
+        margin-top: 175px;
+        margin-bottom: 23px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .wb{
+        text-align: center;
+        margin-bottom: 160px;
+    }
+
+    .clearfix{
+        clear:both;
+    }
+    .footer{
+        background-color: #D9D9D9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .footer a{
+        margin-left:20px;
+        margin-right:20px;
+        text-decoration:none;
+    }
+    .brand1 img {
+        max-width: 100%;
+        transition: all 0.2s linear;
+        border-radius: 1%;
+    }
+    .brand1:hover img {
+        transform: scale(1.05);  
+    }
+    .brand2 img {
+        transition: all 0.2s linear;
+        border-radius: 1%;
+    }
+    .brand2:hover img {
+        transform: scale(1.05);  
+    }
+    .brand3 img {
+        transition: all 0.2s linear;
+        border-radius: 1%;
+    }
+    .brand3:hover img {
+        transform: scale(1.05);  
+    }
+    .brand4 img {
+        transition: all 0.2s linear;
+        border-radius: 1%;
+    }
+    .brand4:hover img {
+        transform: scale(1.05);  
+    }
+  </style>
+  
+<body>
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src ="C:\Users\OSY\Downloads\SPOHI (1).png" height="20">
+        </a>
+        <ul id="menu">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="brand.html">BRAND</a></li>
+          
+        </ul>
+      </div>
+    <nav>
+      <div class="nav_items">
+        <ul>
+      	  <li><a href="outer.html">OUTER</a></li>
+          <li><a href="/">TOP</a></li>
+          <li><a href="/">BOTTOM</a></li>
+          <li><a href="/">BAG</a></li>
+          <li><a href="/">ACC</a></li>
+        </ul>
+      </div>
+    </nav>
+  
+  <div class="section">
+    <input type="radio" name="slide" id="slide01" checked>
+    <input type="radio" name="slide" id="slide02">
+    <input type="radio" name="slide" id="slide03">
+    <div class="slidewrap">
+        <ul class="slidelist">
+            <li>
+                <div class="sli">
+                    <a href="">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" width="100%">
+                </a>
+              </div>
+            </li>
+            <li>
+                <div class="sli2">
+                  <a href="">
+                    <img src="https://images.unsplash.com/photo-1590771129825-5422e5a76d03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" width="100%">
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="sli3">
+                <a href="">
+                    <img src="https://images.unsplash.com/photo-1526676537331-7747bf8278fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGF0aGxldGljfGVufDB8fDB8fHww&w=1000&q=80" width="100%">
+                </a>
+              </div>
+            </li>
+        </ul>
+
+        <div class="slide-control">
+            <div class="control01">
+                <label for="slide03" class="left"></label>
+                <label for="slide02" class="right"></label>
+            </div>
+            <div class="control02">
+                <label for="slide01" class="left"></label>
+                <label for="slide03" class="right"></label>
+            </div>
+            <div class="control03">
+                <label for="slide02" class="left"></label>
+                <label for="slide01" class="right"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bestbrand">
+  <h3>BEST BRAND</h3>
+<div class="brand-list">
+  <a href="https://www.nike.com/kr/?utm_source=Naver&utm_medium=PS&utm_campaign=365DIGITAL_NaverSrand_Main_pc&utm_term=homelink_pc220207&cp=73344396590_search_&dclid=CjgKEAjw7aqkBhDu2fr-zaPbqjQSJACyEyznH5r9LrJ4XnMsr8FdsrTLPbgf_crNyFgMBngkf68P3_D_BwE" class="brand1">
+    <img src="https://static.nike.com/a/images/w_1920,c_limit/wzrqsjqpg6pslrevtkpl/image.png" width="268.5" height="260">
+  </a>
+
+  <a href="https://www.adidas.co.kr/?NaPm=ct%3Dlix7wczc%7Cci%3D0z80002x6SHypuM0uKXD%7Ctr%3Dbrnd%7Chk%3Dbad8d4a1eea43fb7cc310b9ff8a60fb077729599&cm_mmc=AdieSEM_naverbs-_-ALWAYSON-_-3_PC_Title_A-_--_-dv%3AeCom-_-cn%3AALWAYSON-_-pc%3Anaverbs&cm_mmc1=KR&cm_mmc2=PPC-Multiple-CrossCategory-None-Exact-KR-APAC-eCom-Paid_Search" class="brand2">
+    <img src="https://pbs.twimg.com/profile_images/1528575635077025793/voPGWaHF_400x400.jpg" width="268.5" height="260">
+  </a>
+
+  <a href="https://www.asics.co.kr/?utm_source=brand_pc&utm_medium=brand&utm_campaign=ebiz_brand_top_main&n_media=27758&n_query=%EC%95%84%EC%8B%9D%EC%8A%A4&n_rank=1&n_ad_group=grp-a001-04-000000022502022&n_ad=nad-a001-04-000000246858772&n_keyword_id=nkw-a001-04-000003865322896&n_keyword=%EC%95%84%EC%8B%9D%EC%8A%A4&n_campaign_type=4&n_contract=tct-a001-04-000000000699677&n_ad_group_type=5&NaPm=ct%3Dlix7wqvc%7Cci%3D0ya0002P6SHy9mngJ0X2%7Ctr%3Dbrnd%7Chk%3D573854a4f01bd401294bd5f314e694fdc5b7e78d" class="brand3">
+    <img src="https://www.dailypop.kr/news/photo/201808/35004_56693_5745.png" width="268.5" height="260">
+  </a>
+
+  <a href="https://www.reebok.co.kr/" class="brand4">
+      <img src="https://mblogthumb-phinf.pstatic.net/20160728_235/ppanppane_1469697152455h67CW_PNG/%B8%AE%BA%B9_%B7%CE%B0%ED_%282%29.png?type=w800" width="268.5" height="260">
+    </a>
+</div>
+
+<div class="weeklybrand">
+  <h3>WEEKLY BRAND</h3>
+  <div class="wb">
+      <a href="https://www.nbkorea.com/index.action?&utm_source=naver&utm_medium=bs&utm_campaign=BS%EB%A9%94%EC%9D%B8_PC_%EB%9D%BC%EC%9D%B4%ED%8A%B8&utm_content=NBSC%EB%B0%98%ED%8C%94%ED%8B%B0_PC&utm_term=%ED%8D%BC%ED%8F%AC_NBSC%EB%B0%98%ED%8C%94%ED%8B%B0_%ED%99%88%EB%A7%81%ED%81%AC&_C_=&NaPm=ct%3Dlix880qg%7Cci%3D0zi000337mHytr789viL%7Ctr%3Dbrnd%7Chk%3D19f1f40f38c2d593eadf8308f767250139320309">
+          <img src="https://img.shoppingntmall.com/display/goods/detail/describe/13112950/m2x/mixed/resource/https://cdn2.halfclub.com/cdn/product/2021/12/%EB%89%B4%EB%B0%9C%EB%9E%80%EC%8A%A4%20%EB%B0%B0%EB%84%88_1_1017188569.jpg" width="1120" height="295">
+      </a>
+  </div>
+</div>
+<div class="clearfix"></div>
+ 
+
+<div class="footer">
+  <a href="http://facebook.com">
+      <img src="https://bakey.codeit.kr/files/629/images/facebook.png" height="20">
+    </a>
+     <a href="http://instagram.com">
+      <img src="https://bakey.codeit.kr/files/629/images/instagram.png" height="20">
+    </a>
+     <a href="http://twitter.com">
+      <img src="https://bakey.codeit.kr/files/629/images/twitter.png" height="20">
+    </a>
+</div>
+</body>
+</html>

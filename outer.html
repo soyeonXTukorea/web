@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   * {
+      box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
+    }
+    body {
+      margin: 0; /* body의 기본마진을 없애줍니다(선택사항) */
+      font-family: sans-serif;
+    }
+    .navibar{
+    min-width: 1120px;
+  height:60px;
+  padding-left:30px;
+  padding-right:30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #f2f4f7;
+
+}
+.navibar #logo{
+  line-height:60px;
+  margin-left: 170px;
+}
+
+.navibar #logo img{
+  vertical-align: middle;
+}
+
+.navibar #menu{
+  float:right;
+  list-style:none;
+  padding:0;
+  margin-bottom:0;
+  margin-top: 0;
+  margin-right: 170px;
+}
+.navibar #menu li{
+  float:left;
+  margin-left:30px;
+  line-height:60px;
+}
+
+.navibar #menu li a {
+  color:#545454;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navibar #menu li a:hover{
+        color: black;
+    }
+
+    /* nav */
+    .navibar > nav {
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      bottom: 0;
+    }
+    .nav_items {
+      width:100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 120px;
+      padding-left: 40px;
+      margin-top: -15px;
+    }
+    .nav_items ul > li {
+      display: inline-block;
+      margin-right: 224px;
+    }
+    .nav_items ul > li:nth-child(-n + 7) > a { /* <ul>하위 7번째 <li>까지 각각 내부의 <a> 태그 접근 */
+      color: #545454;
+    }
+    .nav_items ul > li > a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+/* 헤더 */
+.header{
+  height:500px;
+  background-image:url("https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80");
+  background-repeat:no-repeat;  /*이미지 반복배열 제한*/
+  background-size:cover; /*배경을 이미지로 완전히 덮이도록함*/ 
+  background-position:center center; /*정가운데 위치하도록함*/
+}
+
+/* 제품 */
+
+.products h3{
+  font-size:24px;
+  color:#545454;
+  margin-top:60px;
+  margin-bottom:60px;
+  text-align:center;
+  font-family: 'Noto Sans KR';
+}
+
+.product-list{
+  width:735px;/*가로길이 (제품너비225+제품간격20)*3의 값*/
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.product {
+  text-align:center;
+  width:225px;
+  display:block;/*a태그의 위치를 제대로 잡아주기 위한 속성*/
+  color:#545454;
+  text-decoration:none;
+  float:left;
+  margin-left:10px;
+  margin-right:10px;
+  object-fit:cover;
+  font-family:'Noto Sans KR';
+  font-size: 15px;
+}
+.product img{
+    object-fit:cover;
+}
+
+.product-name{
+  margin-top:20px;
+  margin-bottom:4px;
+}
+.product-price{
+    margin-bottom: 20px;
+}
+
+.clearfix{
+  clear:both;/*빈태그를 만들어 float를 해제*/
+}
+/* 하단바 */
+
+.footer{
+        background-color: #D9D9D9;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        margin-top: 139px;
+    }
+    .footer a{
+        margin-left:20px;
+        margin-right:20px;
+        text-decoration:none;
+    }
+</style>
+<body>
+    <div class="navibar">
+        <a href="#" id="logo">
+            <img src ="C:\Users\OSY\Downloads\SPOHI (1).png" height="20">
+        </a>
+        <ul id="menu">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="brand.html">BRAND</a></li>
+          
+        </ul>
+      </div>
+    <nav>
+      <div class="nav_items">
+        <ul>
+      	  <li><a href="outer.html">OUTER</a></li>
+          <li><a href="/">TOP</a></li>
+          <li><a href="/">BOTTOM</a></li>
+          <li><a href="/">BAG</a></li>
+          <li><a href="/">ACC</a></li>
+        </ul>
+      </div>
+    </nav>
+      <div class="header"></div>
+      
+      <div class="products">
+          <h3>OUTER</h3>
+        <div class="product-list">
+          <a href="detail.html" class="product">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9d44344e-8d1a-4435-b4a1-8aa36c658e63/%EC%8A%A4%ED%8F%AC%EC%B8%A0%EC%9B%A8%EC%96%B4-%EC%86%94%EB%A1%9C-%EC%8A%A4%EC%9A%B0%EC%8B%9C-%EB%82%A8%EC%84%B1-%ED%8A%B8%EB%9E%99-%EC%9E%AC%ED%82%B7-yWsZ306u.png" width="225" height="225">
+            <div class="product-name">나이키 스포츠웨어 솔로 스우시</div>
+            <div class="product-price">179,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/dcb555ad7a0349189ae4ad7f00f1fbc1_9366/Black_H41391_21_model.jpg" width="225" height="225">
+            <div class="product-name">아디다스 락업 트랙탑</div>
+            <div class="product-price">105,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://image.nbkorea.com/NBRB_Product/20230516/NB20230516133833734001.jpg" width="225" height="225">
+            <div class="product-name">UNI 초경량 바람막이</div>
+            <div class="product-price">129,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8e0e8923-43c7-43c9-ac9a-406b472806c7/%EC%9C%88%EB%93%9C%EB%9F%AC%EB%84%88-%EB%82%A8%EC%84%B1-%EC%9A%B0%EB%B8%90-%EB%9D%BC%EC%9D%B8%EB%93%9C-%EC%9E%AC%ED%82%B7-mtUYfYYs.png" width="225" height="225">
+            <div class="product-name">나이키 윈드러너</div>
+            <div class="product-price">129,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/933355/02/fnd/KOR/fmt/png/%EB%82%A8%EC%84%B1-%EC%89%B4%EB%93%9C-3L-%EC%9A%B0%EB%B8%90-%EC%9E%90%EC%BC%93/AS-3L-Woven-Jacket" width="225" height="225">
+            <div class="product-name">푸마 남성 쉴드 3L 우븐 자켓</div>
+            <div class="product-price">189,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://underarmour.scene7.com/is/image/Underarmour/V5-1373186-001_FSF_EM?rp=standard-0pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=F0F0F0&wid=566&hei=708&size=566,708" width="225" height="225">
+            <div class="product-name">언더아머 유니섹스 APAC 우븐 재킷</div>
+            <div class="product-price">129,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://cdn.shopify.com/s/files/1/0580/9035/6875/products/LC2003700_0_GHO_equipewindbreaker_deepblack_hike_m_1080x.png?v=1677456587" width="225" height="225">
+            <div class="product-name">살로몬 이큅 윈드브레이커</div>
+            <div class="product-price">210,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a90500c52f674c75983fafa4012705c0_9366/Blue_HT8742_21_model.jpg" width="225" height="225">
+            <div class="product-name">아디다스 트래비어 윈드레디 재킷</div>
+            <div class="product-price">119,000</div>
+          </a>
+        
+        <a href="#" class="product">
+            <img src="https://reebok2.cdn-nhncommerce.com/data/goods/23/02/05/1000002259/1000002259_detail_041.jpg" width="225" height="225">
+            <div class="product-name">리복 클래식 벡터 스트레치 바람막이 자켓</div>
+            <div class="product-price">139,000</div>
+          </a>
+          <div class="clearfix"></div>
+        </div>
+        
+  
+      </div>
+      <div class="footer">
+        <a href="http://facebook.com">
+          <img src="https://bakey.codeit.kr/files/629/images/facebook.png" height="20">
+        </a>
+         <a href="http://instagram.com">
+          <img src="https://bakey.codeit.kr/files/629/images/instagram.png" height="20">
+        </a>
+         <a href="http://twitter.com">
+          <img src="https://bakey.codeit.kr/files/629/images/twitter.png" height="20">
+        </a>
+              
+      </div>
+</body>
+</html>
